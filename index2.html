@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<head>
+  <style>
+      body{
+          font-family: tahoma;
+          text-align: center
+      }
+      header{
+          letter-spacing: 6px;
+          background: royalblue;
+          padding: 20px;
+          color:antiquewhite;
+      }
+      
+      h2{
+          font-size: 2cm;
+          width:100%;
+      }
+      section{
+          padding: 30px;
+          margin-bottom: 40px;
+      }
+      .container{
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+      }
+      .card {
+          border: 1px solid #ccc;
+          background-color: pink;
+          margin: 25px;
+          padding: 25px;
+          box-shadow: 6px 6px 6px  rgba(0,0,0,0.3);
+      }
+      @media screen and (min-width: 50em) {
+          .card {
+              flex-basis: 325px;
+          }
+          header h1 {
+              font-size:5em;
+          }
+          .icons {
+              font-size: 8em;
+              padding: 25px;
+          }
+          .button, .container {
+              margin: 10px;
+          }
+          button, .button {
+              background: royalblue;
+              border: 0;
+              color: white;
+              padding: 10px;
+              width: 100%;
+              margin-bottom: 10px;
+          }
+          .blue{
+              background: aliceblue;
+          }
+          td {
+              padding: 10px;
+          }
+          
+          table {
+              margin: auto;
+          }
+          #my-order {
+              background-color:mediumpurple;
+              padding: 25px;
+              display: none;
+          }
+          .footer {
+              padding: 30px;
+              background: grey;    
+          }
+    
+      }
+  </style>
+</head>
+
+<body>
+  <header>
+       <h1>
+      Cupcake Inc.
+    </h1>
+    <h4>
+     Cute cupcakes for best friends
+    </h4>
+  </header>
+
+  <section>
+      <h2>
+      Welcome:
+      </h2>
+      <p>
+      VISION: To create beautiful cupcakes for clients in the Randburg area.
+      </p>
+      <br>
+      <br>
+      ABOUT US: Founded in 2018 by Alyssa Boag.
+      We've served over 100 clients and delivered over 10,000 tasty treats.
+  </section>
+    
+    
+        <h2>
+          SERVICES:
+        </h2>
+    
+    <section class=" blue container">
+        
+    
+        <article class= "card"> 
+            <div class="icons"> &#x1F60e; </div>
+            <h3>Isobelle Mussell</h3>
+            <p>Jnr. Web developer - Creates amazing websites for Cupcakes Inc.</p>
+            <button> Contact </button>
+         </article>
+        
+        <article class="card">
+            <div class="icons"> &#10084; </div>
+            <h3>Michaela Boag</h3>
+            <p>Jnr. Chef - Creates delicious cupcakes for Cupcake Inc.</p>
+            <button> Contact </button>
+            </article>
+        
+        <article class="card">
+            <div class="icons"> &#128537; </div>
+            <h3>Lou Lou Penman</h3>
+            <p>Jnr. Cupcake decorator - Decorates stunning cupcakes for Cupcake Inc.</p>
+            <button> Contact </button>
+        </article>
+        
+    </section>
+    
+     <section>
+    
+    
+        <h2>
+          OUR TEAM
+        </h2>
+    
+    <section class="container" style="background-color:aliceblue">
+        
+    
+        <article class= "card"> 
+            <div class="icons"> ☎ </div>
+            <h3>Lily Walker</h3>
+            <p>Receptionist - Collects all the orders and makes sure they all get to the chef.</p>
+            <button> Contact </button>
+         </article>
+        
+        <article class="card">
+            <div class="icons"> &#128465; </div>
+            <h3>Andy Pitts</h3>
+            <p>Cleaner - Makes sure the kitchens are kept clean and tidy.<p>
+            <button> Contact </button>
+            </article>
+        
+        <article class="card">
+            <div class="icons"> 👨‍🍳 </div>
+            <h3>Oscar Pryor</h3>
+            <p>Head Chef - Creates all the amazing cupcakes with the help of our Jnr. Chef</p>
+            <button> Contact </button>
+        </article>
+        
+    </section>
+    
+    <section>
+        <h2> My order form: </h2>
+        
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" size="25" name="my-name"></td>
+            </tr>
+            
+            <tr>
+                <td> Address: </td>
+                <td><input type="text" size="25" name="my-address"></td>
+            </tr>
+            
+            <tr>
+                <td> Favourite cupcake: </td>
+                <td>
+                    <select name="my-cupcake">
+                    <option> Salted caramel </option>
+                    <option> Chocolate </option>
+                    <option> Strawberry </option>
+                    </select>
+                  </td>
+            </tr>
+            
+            <tr>
+                <td> Quantity: </td>
+                <td>
+                    <input type="number" name="my-qty" value="1" min="1" max="5">
+                    <small>(max 5)</small>
+                </td>
+            </tr>
+            <tr>
+                <br>
+            </tr>
+            <tr>
+                <td colspan="2" >
+                    <input class="button"
+                           type="button"
+                           value="Process order" >
+                           <onclick="placeOrder();">
+                    <input class="button"
+                           type="reset" 
+                           value="Clear" >
+                </td>
+            </tr>
+        </table>
+        
+        <form>
+            <h1> Goofy Form: </h1>
+            What's the silliest idea you have ever had?
+            <br>
+            <input type="text" size="50">
+            <br><br>
+            <button>Submit</button>
+            <br>
+        <div id="my-order">
+        </div>
+    
+       </form>
+        
+        <form
+              id="my-form"
+              action="me.html"
+              target="_blank"
+        ></form>
+        
+        <form id="my-form">
+        </form>
+              
+    </section>
+    
+    <div class=".footer">
+        <h3> Thanks for visiting.</h3>
+        <div class=".container"> </div>
+        <article class=".card">
+            <h3> Get in touch. </h3>
+            <p> Probably the best place to buy cupcakes in all of Auckland</p>
+        </article>
+        <article class=".card">
+            <h3> Contact us:</h3>
+            <p> We would love to hear from you.</p>
+            <br> Call or email us. <br>
+            Mobile: 072345 633 // 
+            Tel: 012 343 3432
+        </article>
+        &copy; 2021, Cupcake Inc.
+    
+    </div>
+    
+    <script>
+        function placeOrder() {
+            var orderForm = document.getElementById("my-form");
+            results= "<h3>success!</h3> Here is your order.";
+            results += "<br>Name: " + orderForm.elements["my-name"].value;
+            results += "<br>Address: " + orderForm.elements["my-address"].value;
+            results += "<br>I like to order: " + orderForm.elements["my-cupcake"].value;
+            results += "<br>Quantity: " + orderForm.elements["my-qty"].value;
+            var orderResults = document.getElementById("my-order"):
+            orderResults.style.display = "block";
+            orderResults.innerHTML = results;
+        }
+     </script>
+</body>
